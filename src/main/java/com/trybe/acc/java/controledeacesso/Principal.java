@@ -12,7 +12,7 @@ public class Principal {
     Scanner scannerInstance = new Scanner(System.in);
 
     boolean runSystem = true;
-    ArrayList<String> customers = new ArrayList<String>();
+    ArrayList<Short> customers = new ArrayList<Short>();
 
     while (runSystem) {
       System.out.println("Entre com o número correspondente à opção desejada:");
@@ -21,7 +21,7 @@ public class Principal {
       String userResponse = scannerInstance.next();
 
       if (userResponse.equals("1")) {
-        System.out.print("Entre com a idade:");
+        System.out.println("Entre com a idade:");
         String customerAge = scannerInstance.next();
         short ageInt = Short.parseShort(customerAge);
 
@@ -33,10 +33,11 @@ public class Principal {
           System.out.println("Pessoa adulta, catraca liberada!");
         }
         
-        customers.add(customerAge);
-      }
-      if (userResponse.equals("2")) {
+        customers.add(ageInt);
+      } else if (userResponse.equals("2")) {
         runSystem = false;
+      } else {
+        System.out.println("Entre com uma opção válida");
       }
     }
     
