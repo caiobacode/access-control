@@ -16,9 +16,10 @@ public class Principal {
     ArrayList<Short> customers = new ArrayList<Short>();
 
     while (runSystem) {
-      System.out.println("Entre com o número correspondente à opção desejada:");
-      System.out.println("1 - Acessar o estabelecimento");
-      System.out.println("2 - Finalizar o sistema e mostrar relatório");
+      String firstOutput = "Entre com o número correspondente à opção desejada:\n" 
+                      + "1 - Acessar o estabelecimento\n"
+                      + "2 - Finalizar o sistema e mostrar relatório";
+      System.out.println(firstOutput);
       String userResponse = scannerInstance.next();
 
       if (userResponse.equals("1")) {
@@ -47,36 +48,32 @@ public class Principal {
     int totalAdults = 0;
     int totalElderlys = 0;
     
-    for (int i = 0; i < customers.size(); i++) {
-      if (customers.get(i) < 18) {
+    for (int customerAge : customers) {
+      if (customerAge < 18) {
         totalMinors++;
-      } else if (customers.get(i) > 49) {
+      } else if (customerAge > 49) {
         totalElderlys++;
       } else {
         totalAdults++;
       }
     }
 
-    float minorsFloat = totalMinors;
-    float adultsFloat = totalAdults;
-    float elderlysFloat = totalElderlys;
-    
-    DecimalFormat decimal = new DecimalFormat("0.00");
-    String minorsPercentage = decimal.format((minorsFloat * 100) / customers.size());
-    String adultsPercentage = decimal.format((adultsFloat * 100) / customers.size());
-    String elderlysPercentage = decimal.format((elderlysFloat * 100) / customers.size());
-    
-    System.out.println("----- Quantidade -----");
-    System.out.println("menores: " + totalMinors);
-    System.out.println("adultas: " + totalAdults);
-    System.out.println("a partir de 50: " + totalElderlys);
-    
-    System.out.println("");
+    float totalCustomers = customers.size();
 
-    System.out.println("----- Percentual -----");
-    System.out.println("menores: " + minorsPercentage + "%");
-    System.out.println("adultas: " + adultsPercentage + "%");
-    System.out.println("a partir de 50: " + elderlysPercentage + "%");
+    DecimalFormat decimal = new DecimalFormat("0.00");
+    String minorsPercentage = decimal.format((totalMinors * 100) / totalCustomers);
+    String adultsPercentage = decimal.format((totalAdults * 100) / totalCustomers);
+    String elderlysPercentage = decimal.format((totalElderlys * 100) / totalCustomers);
     
+    String finalOutput = "----- Quantidade -----\n"
+            + "menores: " + totalMinors + "\n"
+            + "adultas: " + totalAdults + "\n"
+            + "a partir de 50: " + totalElderlys + "\n\n"
+            + "----- Percentual -----\n"
+            + "menores: " + minorsPercentage + "%\n"
+            + "adultas: " + adultsPercentage + "%\n"
+            + "a partir de 50: " + elderlysPercentage + "%\n";
+    
+    System.out.println(finalOutput);
   }
 }
