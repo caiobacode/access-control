@@ -5,7 +5,7 @@
 </div>
 
 ## Description
-<p>This is my first Java project, it consists of a system to control the access of people to a establishment, allowing to register infinite clients, and when finished, the program displays a report with the percentage of minors, adults, and seniors.</p>
+<p>This is my first Java project, it a system to control the access of people to a establishment, allowing to register infinite clients, and when finished, the program displays a report with the percentage of minors, adults, and seniors.</p>
 
 ## 💻 Tecnologies used
 [![JAVA][JAVA]][JAVA-url]
