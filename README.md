@@ -4,4 +4,4 @@
 <img width="300px" alt="access-img" src="./access-control.jpg">
 </div>
 
-<h2 align="center">🚧 Building description and details 🚧</h2>
+<h2 align="center">🚧 Building description and detailss 🚧</h2>
