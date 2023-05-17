@@ -10,6 +10,26 @@
 ## 💻 Tecnologies used
 [![JAVA][JAVA]][JAVA-url]
 
+## 🛠️ Instructions
+
+### 📚 Requirements to run this project:
+- Git.
+- Java - v >= 11.0
+
+
+#### <strong>💻 Run in terminal 💻</strong>
+    
+```bash
+# Clone the repo
+git clone https://github.com/caiobacode/access-control.git
+
+# Enter in repo
+cd access-control\src\main\java\com\trybe\acc\java\controledeacesso
+
+# Run with Java
+java Principal.java
+```
+
 ## ✏️ What i learned
 
 + Conditional structures in Java.
